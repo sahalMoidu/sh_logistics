@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sh_logistics *.css
+recursive-include sh_logistics *.csv
+recursive-include sh_logistics *.html
+recursive-include sh_logistics *.ico
+recursive-include sh_logistics *.js
+recursive-include sh_logistics *.json
+recursive-include sh_logistics *.md
+recursive-include sh_logistics *.png
+recursive-include sh_logistics *.py
+recursive-include sh_logistics *.svg
+recursive-include sh_logistics *.txt
+recursive-exclude sh_logistics *.pyc
