@@ -1,0 +1,257 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "JOB-.YY.-.####",
+ "creation": "2022-01-19 07:54:00.849162",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_date",
+  "customer_section",
+  "shipper",
+  "consignee",
+  "column_break_6",
+  "bill_to_party",
+  "notify_party",
+  "shipment_section",
+  "mode_of_transport",
+  "origin",
+  "destination",
+  "vessel",
+  "voyage",
+  "column_break_15",
+  "eta",
+  "etd",
+  "bl_no",
+  "boe_no",
+  "mawb",
+  "hawb",
+  "section_break_21",
+  "commodity",
+  "packges",
+  "column_break_24",
+  "gross_weight",
+  "cbm",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_date",
+   "fieldtype": "Date",
+   "label": "Job Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "label": "Customer"
+  },
+  {
+   "fieldname": "shipper",
+   "fieldtype": "Link",
+   "label": "Shipper ",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "consignee",
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bill_to_party",
+   "fieldtype": "Link",
+   "label": "Bill To Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "notify_party",
+   "fieldtype": "Link",
+   "label": "Notify Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "shipment_section",
+   "fieldtype": "Section Break",
+   "label": "Shipment "
+  },
+  {
+   "fieldname": "mode_of_transport",
+   "fieldtype": "Select",
+   "label": "Mode Of Transport",
+   "options": "Air\nSea\nRoad\nRail"
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Link",
+   "label": "Origin",
+   "options": "Country"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Link",
+   "label": "Destination",
+   "options": "Country"
+  },
+  {
+   "fieldname": "vessel",
+   "fieldtype": "Data",
+   "label": "Vessel"
+  },
+  {
+   "fieldname": "voyage",
+   "fieldtype": "Data",
+   "label": "Voyage"
+  },
+  {
+   "fieldname": "eta",
+   "fieldtype": "Date",
+   "label": "ETA"
+  },
+  {
+   "fieldname": "etd",
+   "fieldtype": "Date",
+   "label": "ETD"
+  },
+  {
+   "fieldname": "bl_no",
+   "fieldtype": "Data",
+   "label": "BL No"
+  },
+  {
+   "fieldname": "boe_no",
+   "fieldtype": "Data",
+   "label": "BOE No"
+  },
+  {
+   "fieldname": "mawb",
+   "fieldtype": "Data",
+   "label": "MAWB"
+  },
+  {
+   "fieldname": "hawb",
+   "fieldtype": "Data",
+   "label": "HAWB"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commodity",
+   "fieldtype": "Data",
+   "label": "Commodity"
+  },
+  {
+   "fieldname": "packges",
+   "fieldtype": "Data",
+   "label": "Packges"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_weight",
+   "fieldtype": "Data",
+   "label": "Gross Weight"
+  },
+  {
+   "fieldname": "cbm",
+   "fieldtype": "Data",
+   "label": "CBM"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-01-20 21:47:32.833497",
+ "modified_by": "Administrator",
+ "module": "Logistics",
+ "name": "Job",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

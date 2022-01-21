@@ -9,6 +9,9 @@ app_color = "grey"
 app_email = "sahal@softwarehut.io"
 app_license = "MIT"
 
+
+fixtures = ['']
+
 # Includes in <head>
 # ------------------
 
