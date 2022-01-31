@@ -4,6 +4,7 @@
  "autoname": "JOB-.YY.-.####",
  "creation": "2022-01-19 07:54:00.849162",
  "doctype": "DocType",
+ "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
@@ -33,7 +34,9 @@
   "column_break_24",
   "gross_weight",
   "cbm",
-  "amended_from"
+  "amended_from",
+  "section_break_28",
+  "shipment_detail"
  ],
  "fields": [
   {
@@ -98,13 +101,13 @@
    "fieldname": "origin",
    "fieldtype": "Link",
    "label": "Origin",
-   "options": "Country"
+   "options": "Port"
   },
   {
    "fieldname": "destination",
    "fieldtype": "Link",
    "label": "Destination",
-   "options": "Country"
+   "options": "Port"
   },
   {
    "fieldname": "vessel",
@@ -177,12 +180,22 @@
   {
    "fieldname": "column_break_15",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shipment_detail",
+   "fieldtype": "Table",
+   "label": "Shipment Detail",
+   "options": "Shipment Details"
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-01-20 21:47:32.833497",
+ "modified": "2022-01-28 06:56:37.580685",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Job",
