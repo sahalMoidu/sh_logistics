@@ -60,14 +60,32 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Quotation",
+   "link_to": "Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Job",
    "link_to": "Job",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2022-01-31 05:53:53.410062",
+ "modified": "2022-01-31 06:16:31.047016",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Logistics",

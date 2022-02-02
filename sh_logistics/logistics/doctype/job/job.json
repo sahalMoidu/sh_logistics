@@ -17,6 +17,8 @@
   "notify_party",
   "shipment_section",
   "mode_of_transport",
+  "type",
+  "incoterms",
   "origin",
   "destination",
   "vessel",
@@ -190,12 +192,24 @@
   {
    "fieldname": "section_break_28",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Job Type"
+  },
+  {
+   "fieldname": "incoterms",
+   "fieldtype": "Link",
+   "label": "Incoterms",
+   "options": "Incoterms"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-01-28 06:56:37.580685",
+ "modified": "2022-02-02 10:36:58.730403",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Job",
