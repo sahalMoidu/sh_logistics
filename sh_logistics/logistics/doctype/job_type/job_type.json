@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "[type]",
+ "autoname": "field:type",
  "creation": "2022-01-30 16:28:49.474747",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -13,12 +13,13 @@
   {
    "fieldname": "type",
    "fieldtype": "Data",
-   "label": "Type"
+   "label": "Type",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-04 10:16:51.215167",
+ "modified": "2022-02-04 10:26:12.861733",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Job Type",
