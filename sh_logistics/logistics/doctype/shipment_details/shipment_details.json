@@ -50,12 +50,12 @@
   {
    "fieldname": "gross_wt",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Gross Wt"
   },
   {
    "fieldname": "volume",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Volume"
   },
   {
@@ -67,7 +67,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-01-30 16:29:45.440203",
+ "modified": "2022-04-27 12:57:22.968200",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Shipment Details",

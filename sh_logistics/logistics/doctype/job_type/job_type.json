@@ -7,7 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "type"
+  "type",
+  "code",
+  "description"
  ],
  "fields": [
   {
@@ -15,11 +17,21 @@
    "fieldtype": "Data",
    "label": "Type",
    "unique": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "label": "Code"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-04 10:26:12.861733",
+ "modified": "2022-04-28 12:20:28.399124",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Job Type",

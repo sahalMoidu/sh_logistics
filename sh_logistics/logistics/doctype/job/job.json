@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "JOB-.YY.-.####",
- "creation": "2022-01-19 07:54:00.849162",
+ "autoname": "naming_series:",
+ "creation": "2022-04-29 05:30:13.603137",
  "doctype": "DocType",
  "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "job_date",
   "customer_section",
   "shipper",
@@ -36,24 +37,26 @@
   "column_break_24",
   "gross_weight",
   "cbm",
-  "amended_from",
   "section_break_28",
-  "shipment_detail"
+  "shipment_detail",
+  "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "job_date",
-   "fieldtype": "Date",
-   "label": "Job Date"
+   "bold": 1,
+   "default": "AGS/.YYYY./.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "AGS/.YYYY./.#####\nAGS/.YYYY./.#####./SIMP\nAGS/.YYYY./.#####./AIMP\nAGS-.YYYY.-.#####.-AEXP\nAGS-.YYYY.-.#####.-SEXP",
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Job",
-   "print_hide": 1,
-   "read_only": 1
+   "fieldname": "job_date",
+   "fieldtype": "Date",
+   "label": "Job Date",
+   "reqd": 1
   },
   {
    "fieldname": "customer_section",
@@ -100,6 +103,20 @@
    "options": "Air\nSea\nRoad\nRail"
   },
   {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Job Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incoterms",
+   "fieldtype": "Link",
+   "label": "Incoterms",
+   "options": "Incoterms"
+  },
+  {
    "fieldname": "origin",
    "fieldtype": "Link",
    "label": "Origin",
@@ -120,6 +137,10 @@
    "fieldname": "voyage",
    "fieldtype": "Data",
    "label": "Voyage"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "eta",
@@ -180,8 +201,8 @@
    "label": "CBM"
   },
   {
-   "fieldname": "column_break_15",
-   "fieldtype": "Column Break"
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "shipment_detail",
@@ -190,29 +211,23 @@
    "options": "Shipment Details"
   },
   {
-   "fieldname": "section_break_28",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "type",
+   "fieldname": "amended_from",
    "fieldtype": "Link",
-   "label": "Type",
-   "options": "Job Type"
-  },
-  {
-   "fieldname": "incoterms",
-   "fieldtype": "Link",
-   "label": "Incoterms",
-   "options": "Incoterms"
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-02 10:36:58.730403",
+ "modified": "2022-04-29 05:33:54.680637",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Job",
+ "name_case": "UPPER CASE",
  "owner": "Administrator",
  "permissions": [
   {
