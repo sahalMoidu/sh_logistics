@@ -10,6 +10,7 @@
  "field_order": [
   "naming_series",
   "job_date",
+  "job_close_date",
   "customer_section",
   "shipper",
   "consignee",
@@ -218,12 +219,17 @@
    "options": "Job",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "job_close_date",
+   "fieldtype": "Date",
+   "label": "Job Close Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-04-29 05:33:54.680637",
+ "modified": "2022-06-08 07:43:52.591637",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Job",
