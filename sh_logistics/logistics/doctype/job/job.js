@@ -48,6 +48,21 @@ frappe.ui.form.on('Job', {
 					}
 				});
 			}, "Create");
+
+			frm.add_custom_button(__('Ledger'), function () {
+				frappe.route_options = {
+					"job": frm.doc.name,
+
+				};
+				frappe.set_route("query-report", "General Ledger");
+			}, "View");
+			frm.add_custom_button(__('Profit & Loss'), function () {
+				frappe.route_options = {
+					"job": frm.doc.name,
+
+				};
+				frappe.set_route("query-report", "Profit and Loss Statement");
+			}, "View");
 		}
 
 	}
