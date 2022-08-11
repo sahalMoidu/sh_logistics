@@ -1,0 +1,50 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2022-08-10 17:03:54.049462",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Test",
+ "modified": "2022-08-11 11:18:53.373868",
+ "modified_by": "Administrator",
+ "module": "Logistics",
+ "name": "JOB P&L",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "select parent_account Schedule, account_name Account, sum( credit - debit) Amount \nfrom `tabGL Entry` as GL inner join `tabAccount` AC on GL.account = AC.name \nleft outer join  tabJob JB on JB.name = GL.job\nwhere AC.report_type= 'Profit and Loss'\nand (\n        ( (GL.job is null   or GL.job = '')\n         and GL.posting_date <= %(to_date)s and \n         GL.posting_date >= %(from_date)s \n        )\n or \n ( (GL.job is not null   or GL.job = '') and  \n  JB.job_close_date <= %(to_date)s and \n JB.job_close_date >= %(from_date)s )\n and JB.docstatus =1\n )\n group by parent_account , account_name\n;\n",
+ "ref_doctype": "GL Entry",
+ "report_name": "JOB P&L",
+ "report_script": "select parent_account , account_name , debit , credit , job , job_start_date , posting_date from `tabGL Entry` as GL inner join `tabAccount` AC on GL.account = AC.name \nleft outer join  tabJob JB on JB.name = GL.job\nwhere AC.report_type= 'Profit and Loss'\nand (\n        ( GL.job is null   \n         and GL.posting_date <= %(to_date)s and \n         GL.posting_date >= %(from_date)s \n        )\n or \n (GL.job is not null and  \n  JB.job_date <= %(to_date)s and \n JB.job_start_date >= %(from_date)s )\n )\n \n --, job , job_start_date ,job_close_date , posting_date ,voucher_no ,GL.* \n;\n",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Auditor"
+  }
+ ]
+}

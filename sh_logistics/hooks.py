@@ -176,3 +176,13 @@ user_data_fields = [
 # 	"sh_logistics.auth.validate"
 # ]
 
+doctype_js = {
+    "Sales Invoice": "public/js/sales_invoice.js",
+    "Purchase Invoice": "public/js/purchase_invoice.js",
+}
+
+override_doctype_class = {
+    "Sales Invoice": "sh_logistics.overrides.sales_invoice.CustomSalesInvoice",
+    "Purchase Invoice": "sh_logistics.overrides.purchase_invoice.CustomPurchaseInvoice"
+
+}

@@ -24,4 +24,15 @@ frappe.ui.form.on('Job', {
 		}
 
 	}
+	
+
 });
+
+frappe.ui.form.on('Job', 'before_submit',  function (frm, cdt, cdn) {
+	
+	if (!frm.doc.job_close_date) {
+		frappe.msgprint(__("You Cannot Submit without Job Close Date"));
+		frappe.validated = false;
+	}
+});
+
