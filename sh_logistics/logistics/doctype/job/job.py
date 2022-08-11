@@ -3,6 +3,12 @@
 
 # import frappe
 from frappe.model.document import Document
+import frappe
 
 class Job(Document):
 	pass
+@frappe.whitelist()
+def createDoc (dt ):
+	doc = frappe.new_doc(dt)
+	# doc.job= job;
+	return doc;
