@@ -87,6 +87,14 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Reports",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
    "label": "JOB P&L",
    "link_to": "JOB P&L",
    "link_type": "Report",
@@ -94,7 +102,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-08-11 11:51:33.949005",
+ "modified": "2022-08-11 12:55:58.593610",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Logistics",
