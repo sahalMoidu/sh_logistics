@@ -45,11 +45,11 @@
  "fields": [
   {
    "bold": 1,
-   "default": "AGS/.YYYY./.#####",
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "AGS/.YYYY./.#####\nAGS/.YYYY./.#####./SIMP\nAGS/.YYYY./.#####./AIMP\nAGS-.YYYY.-.#####.-AEXP\nAGS-.YYYY.-.#####.-SEXP",
+   "options": "JOB-.YYYY./.#####\nJOB-.YYYY./.#####./SIMP\nJOB-.YYYY./.#####./AIMP\nJOB-.YYYY.-.#####.-AEXP\nJOB-.YYYY.-.#####.-SEXP",
+   "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
   },
@@ -229,7 +229,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-06-08 07:43:52.591637",
+ "modified": "2022-08-17 08:21:39.512028",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Job",
