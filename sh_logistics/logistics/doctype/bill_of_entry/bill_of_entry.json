@@ -76,7 +76,8 @@
    "fieldtype": "Select",
    "label": "Stock Movement",
    "options": "In\nOut",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "column_break_4",
@@ -86,7 +87,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-08-17 16:45:58.134579",
+ "modified": "2022-08-18 08:38:16.025607",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Bill Of Entry",

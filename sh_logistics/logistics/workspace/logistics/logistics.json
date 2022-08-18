@@ -113,15 +113,25 @@
   {
    "hidden": 0,
    "is_query_report": 1,
-   "label": "Bill Of Entry",
+   "label": "Bill Of Entry Details",
    "link_to": "Bill Of Entry",
+   "link_type": "Report",
+   "onboard": 0,
+   "only_for": "",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Bill Of Entry Stock",
+   "link_to": "Bill Of Entry Stock",
    "link_type": "Report",
    "onboard": 0,
    "only_for": "",
    "type": "Link"
   }
  ],
- "modified": "2022-08-17 16:50:58.781061",
+ "modified": "2022-08-18 09:16:07.830306",
  "modified_by": "Administrator",
  "module": "Logistics",
  "name": "Logistics",
