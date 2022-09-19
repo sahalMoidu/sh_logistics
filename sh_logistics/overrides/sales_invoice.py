@@ -15,6 +15,7 @@ from erpnext.accounts.doctype.sales_invoice.sales_invoice import (
 from erpnext.accounts.party import get_due_date, get_party_account
 from erpnext.stock.doctype.serial_no.serial_no import get_pos_reserved_serial_nos, get_serial_nos
 from sh_logistics.logistics.doctype.job import job
+from erpnext.regional.saudi_arabia.utils import delete_qr_code_file , create_qr_code
 
 class CustomSalesInvoice(SalesInvoice):
 	def __init__(self, *args, **kwargs):
@@ -28,12 +29,19 @@ class CustomSalesInvoice(SalesInvoice):
 		if job.docstatus ==1:
 			frappe.throw(_("Job Closed! Cannot Cancel"))
 	def before_submit(self):
-		super(SalesInvoice, self).before_cancel()
+		super(SalesInvoice, self).before_submit()
 		job = frappe.get_doc('Job',self.job)
 		if job.docstatus ==1:
 			frappe.throw(_("Job Closed! Cannot Submit"))
 		if job.docstatus ==2:
 			frappe.throw(_("Job Cancelled! Cannot Submit"))
+	# def before_delete(self):
+	# 	delete_qr_code_file(self)
+	# 	create_qr_code(self)
+	# 	frappe.throw(_("Job Cancelled! Cannot Submit"))
+	# 	# super(SalesInvoice, self).before_delete()
+
+	
 	
 
 	

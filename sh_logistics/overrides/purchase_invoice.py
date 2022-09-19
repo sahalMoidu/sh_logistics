@@ -23,7 +23,7 @@ class CustomPurchaseInvoice(PurchaseInvoice):
 			if job.docstatus ==1:
 				frappe.throw(_("Job Closed! Cannot Cancel"))
 	def before_submit(self):
-		super(PurchaseInvoice, self).before_cancel()
+		super(PurchaseInvoice, self).before_submit()
 		if self.job :
 			job = frappe.get_doc('Job',self.job)
 			if job.docstatus ==1:
